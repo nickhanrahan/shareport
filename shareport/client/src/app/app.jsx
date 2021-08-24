@@ -13,6 +13,7 @@ const App = () => {
         <button type="button" className="create-btn" onClick={() => setOpenCreate(true)}>Create Portfolio</button>
         <CreatePortfolio
           open={openCreate}
+          setOpen={setOpenCreate}
         />
       </div>
       <div className="list-ctr">

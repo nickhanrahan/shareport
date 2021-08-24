@@ -8,7 +8,8 @@ body {
   --clr-three: #3600a3;
   --clr-four: #8936ff;
   --clr-five: #d4cfff;
-  --clr-border: ;
+  --clr-light: #e7e4f5;
+  --clr-border: #000000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #8936ff;
+  background-color: #ffffff;
 }
