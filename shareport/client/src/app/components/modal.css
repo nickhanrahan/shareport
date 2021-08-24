@@ -36,6 +36,11 @@
   width: 500px;
 }
 
-.risk-radio {
+.risk-label {
   display: block;
+}
+
+.thesis-input {
+  height: 175px;
+  width: 100%;
 }

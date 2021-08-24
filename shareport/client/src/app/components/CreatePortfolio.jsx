@@ -35,7 +35,7 @@ const CreatePortfolio = ({ open, setOpen }) => {
             />
             <div className="inv-list">Inv list here</div>
             <div className="risk">
-              <label className="risk-radio" htmlFor="risk">Risk Tolerance: </label>
+              <label className="risk-label" htmlFor="risk">Risk Tolerance: </label>
               <input name="risk" type="radio" value="1" required />
               Conservative
               <input name="risk" type="radio" value="2" />
@@ -48,6 +48,10 @@ const CreatePortfolio = ({ open, setOpen }) => {
               Moderate Aggressive
               <input name="risk" type="radio" value="6" />
               Aggressive Growth
+            </div>
+            <div className="thesis-ctr">
+              <label className="thesis-label" htmlFor="thesis">Rationale: </label>
+              <input className="thesis-input" name="thesis" required />
             </div>
           </form>
         </div>
