@@ -34,4 +34,4 @@ module.exports = {
   getPortfolios,
   getDetails,
   postPortfolio,
-}
+};
