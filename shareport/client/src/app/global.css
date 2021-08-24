@@ -1,0 +1,14 @@
+body {
+  margin: 0px;
+}
+
+#app {
+  --clr-primary: #5445c4;
+  --clr-secondary: #746d8a;
+  --clr-three: #3600a3;
+  --clr-four: #8936ff;
+  --clr-five: #d4cfff;
+  --clr-border: ;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #8936ff;
+}
