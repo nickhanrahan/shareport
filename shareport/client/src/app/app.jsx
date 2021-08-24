@@ -1,8 +1,16 @@
 import React from 'react';
+import PortfolioList from './components/PortfolioList.jsx';
 
 const App = () => {
   return (
-    <div>Helo</div>
+    <>
+      <div className="top-bar">
+        <div className="shareport-logo">SharePort</div>
+      </div>
+      <div className="list-ctr">
+        <PortfolioList />
+      </div>
+    </>
   )
 }
 
