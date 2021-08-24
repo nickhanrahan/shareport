@@ -8,6 +8,8 @@ const CreatePortfolio = ({ open, setOpen }) => {
 
   const [username, setUsername] = useState('');
   const [name, setName] = useState('');
+  const [risk, setRisk] = useState('');
+  const [thesis, setThesis] = useState('');
 
   return ReactDOM.createPortal(
     <>
@@ -20,11 +22,11 @@ const CreatePortfolio = ({ open, setOpen }) => {
           <form className="create-form">
             <div className="username">
               <label htmlFor="username">Username: </label>
-              <input name="username" required></input>
+              <input name="username" required />
             </div>
             <div className="name">
               <label htmlFor="name">Portfolio Name: </label>
-              <input name="name" required></input>
+              <input name="name" required />
             </div>
             <input
               className="tkr-search-form"
@@ -32,6 +34,21 @@ const CreatePortfolio = ({ open, setOpen }) => {
               placeholder="Search by Ticker Symbol or Company Name..."
             />
             <div className="inv-list">Inv list here</div>
+            <div className="risk">
+              <label className="risk-radio" htmlFor="risk">Risk Tolerance: </label>
+              <input name="risk" type="radio" value="1" required />
+              Conservative
+              <input name="risk" type="radio" value="2" />
+              Moderate Conservative
+              <input name="risk" type="radio" value="3" />
+              Moderate
+              <input name="risk" type="radio" value="4" />
+              Moderate Growth
+              <input name="risk" type="radio" value="5" />
+              Moderate Aggressive
+              <input name="risk" type="radio" value="6" />
+              Aggressive Growth
+            </div>
           </form>
         </div>
       </div>
