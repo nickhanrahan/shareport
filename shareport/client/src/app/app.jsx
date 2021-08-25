@@ -7,7 +7,7 @@ const App = () => {
   const [openCreate, setOpenCreate] = useState(false);
 
   return (
-    <div className="global">
+    <div className="main">
       <div className="top-bar">
         <div className="shareport-logo">SharePort</div>
         <button type="button" className="create-btn" onClick={() => setOpenCreate(true)}>Create Portfolio</button>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import './modal.css';
@@ -7,10 +7,25 @@ import InvSearch from './InvSearch.jsx';
 const CreatePortfolio = ({ open, setOpen }) => {
   if (!open) return null;
 
+  const [selected, setSelected] = useState([]);
   const [username, setUsername] = useState('');
   const [name, setName] = useState('');
   const [risk, setRisk] = useState('');
   const [thesis, setThesis] = useState('');
+
+  const handleSelection = (selection) => {
+    const newInv = {
+      symbol: selection.symbol,
+      name: selection.name,
+      exchange: selection.exchangeShortName,
+    };
+    axios.get()
+    setSelected([newInv, ...selected]);
+  };
+
+  useEffect(() => {
+
+  }, [selected]);
 
   return ReactDOM.createPortal(
     <>
@@ -29,8 +44,10 @@ const CreatePortfolio = ({ open, setOpen }) => {
               <label htmlFor="name">Portfolio Name: </label>
               <input name="name" required />
             </div>
-            <InvSearch />
-            <div className="inv-list">Inv list here</div>
+            <InvSearch handleSelection={handleSelection}/>
+            <div className="create-list">
+
+            </div>
             <div className="risk">
               <label className="risk-label" htmlFor="risk">Risk Tolerance: </label>
               <input name="risk" type="radio" value="1" required />
