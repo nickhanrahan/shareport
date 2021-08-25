@@ -32,8 +32,14 @@
   padding-top: 1.5px;
 }
 
-.tkr-search-form {
-  width: 500px;
+.inv-search {
+  padding: 5px;
+}
+
+.inv-search-input {
+  display: flex;
+  width: 80%;
+  margin: auto;
 }
 
 .risk-label {
@@ -43,4 +49,6 @@
 .thesis-input {
   height: 175px;
   width: 100%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
 }

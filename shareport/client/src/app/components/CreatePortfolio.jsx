@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import './modal.css';
+import InvSearch from './InvSearch.jsx';
 
 const CreatePortfolio = ({ open, setOpen }) => {
   if (!open) return null;
@@ -28,11 +29,7 @@ const CreatePortfolio = ({ open, setOpen }) => {
               <label htmlFor="name">Portfolio Name: </label>
               <input name="name" required />
             </div>
-            <input
-              className="tkr-search-form"
-              type="text"
-              placeholder="Search by Ticker Symbol or Company Name..."
-            />
+            <InvSearch />
             <div className="inv-list">Inv list here</div>
             <div className="risk">
               <label className="risk-label" htmlFor="risk">Risk Tolerance: </label>
@@ -51,7 +48,7 @@ const CreatePortfolio = ({ open, setOpen }) => {
             </div>
             <div className="thesis-ctr">
               <label className="thesis-label" htmlFor="thesis">Rationale: </label>
-              <input className="thesis-input" name="thesis" required />
+              <textarea className="thesis-input" name="thesis" required />
             </div>
           </form>
         </div>
