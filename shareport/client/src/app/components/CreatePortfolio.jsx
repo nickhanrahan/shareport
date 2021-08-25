@@ -14,13 +14,25 @@ const CreatePortfolio = ({ open, setOpen }) => {
   const [thesis, setThesis] = useState('');
 
   const handleSelection = (selection) => {
-    const newInv = {
+    const invName = {
       symbol: selection.symbol,
       name: selection.name,
       exchange: selection.exchangeShortName,
     };
-    axios.get()
-    setSelected([newInv, ...selected]);
+    axios.get(`/quote/${selection.symbol}`)
+      .then((quote) => {
+        invName.name = quote.data.name;
+        const invQuote = {
+          price: quote.data.price,
+          dayChange: Math.round((quote.data.change * 100)) / 100,
+          dayChangePct: Math.round((quote.data.changesPercentage * 100)) / 100
+        };
+        const newInv = { ...invName, ...invQuote };
+        setSelected([newInv, ...selected]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   useEffect(() => {

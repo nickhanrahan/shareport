@@ -23,6 +23,19 @@ app.get('/search/:query', (req, res) => {
     });
 });
 
+app.get('/quote/:symbol', (req, res) => {
+  const { symbol } = req.params;
+  axios.get(`https://financialmodelingprep.com/api/v3/quote/${symbol}?apikey=${APIKEY}`)
+    .then((quote) => {
+      res.status(200);
+      res.send(quote.data[0]);
+    })
+    .catch((err) => {
+      res.status(404);
+      res.send(err);
+    });
+});
+
 app.get('/portfolios', (req, res) => {
   res.status(200);
   res.send('get portfolios');

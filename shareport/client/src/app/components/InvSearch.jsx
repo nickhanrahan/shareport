@@ -3,7 +3,7 @@ import axios from 'axios';
 import InvSearchItem from './InvSearchItem.jsx';
 import './inv-search.css';
 
-const InvSearch = ( { handleSelection }) => {
+const InvSearch = ({ handleSelection }) => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
 
