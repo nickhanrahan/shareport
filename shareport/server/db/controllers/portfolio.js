@@ -17,7 +17,6 @@ const createPortfolio = (req, res) => {
     totalCost: req.body.totalValue,
     holdings: holdingsArray,
   });
-  console.log(holdingsArray);
   newPortfolio.save()
     .then(() => {
       res.status(201);
@@ -29,6 +28,15 @@ const createPortfolio = (req, res) => {
     });
 };
 
+const getPortfolios = (req, res) => {
+  Portfolio.find({})
+    .then((portfolios) => {
+      res.status(200);
+      res.send(portfolios);
+    });
+};
+
 module.exports = {
   createPortfolio,
+  getPortfolios,
 };

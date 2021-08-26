@@ -2,7 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const db = require('./db/index.js');
 const { APIKEY } = require('./fmp-config.js');
-const { createPortfolio } = require('./db/controllers/portfolio.js');
+const { createPortfolio, getPortfolios } = require('./db/controllers/portfolio.js');
 
 const port = 3000;
 
@@ -38,10 +38,7 @@ app.get('/quote/:symbol', (req, res) => {
     });
 });
 
-app.get('/portfolios', (req, res) => {
-  res.status(200);
-  res.send('get portfolios');
-});
+app.get('/portfolios', getPortfolios);
 
 app.get('/portfolios/:id', (req, res) => {
   const { id } = req.params;
