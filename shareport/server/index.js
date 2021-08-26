@@ -2,6 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const db = require('./db/index.js');
 const { APIKEY } = require('./fmp-config.js');
+const { createPortfolio } = require('./db/controllers/portfolio.js');
 
 const port = 3000;
 
@@ -48,11 +49,7 @@ app.get('/portfolios/:id', (req, res) => {
   res.send(`get details for ${id}`);
 });
 
-app.post('/portfolios', (req, res) => {
-  console.log(req.body);
-  res.status(201);
-  res.send('post');
-});
+app.post('/portfolios', createPortfolio);
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);

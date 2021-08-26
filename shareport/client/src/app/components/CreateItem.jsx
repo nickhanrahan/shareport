@@ -5,8 +5,9 @@ const CreateItem = ({ selection, changeShares }) => {
   const [marketVal, setMarketVal] = useState(0);
 
   const handleSharesInput = (event) => {
-    setNumShares(event.target.value);
-    changeShares(event.target.value, selection.symbol);
+    const number = parseInt(event.target.value);
+    setNumShares(number);
+    changeShares(number, selection.symbol);
   };
 
   useEffect(() => {

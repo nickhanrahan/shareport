@@ -14,7 +14,7 @@ const portfolioSchema = mongoose.Schema({
   username: String,
   risk: String,
   thesis: String,
-  totalValue: Number,
+  totalCost: Number,
   holdings: [holdingSchema],
 },
 {

@@ -66,6 +66,7 @@ const CreatePortfolio = ({ open, setOpen }) => {
       .catch((err) => {
         console.log(err);
       });
+    setOpen(false);
   };
 
   useEffect(() => {
