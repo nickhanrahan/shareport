@@ -23,3 +23,53 @@
   z-index: 1000;
 }
 
+.btn-close-details {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 1.5px;
+}
+
+.details-titles {
+  display: flex;
+}
+
+.details-holding-item {
+  display: flex;
+}
+
+.details-col1 {
+  width: 8%;
+}
+
+.details-col2 {
+  width: 20%;
+}
+
+.details-col3 {
+  width: 10%;
+}
+
+.details-col4 {
+  width: 10%;
+}
+
+.details-col5 {
+  width: 10%;
+}
+
+.details-col6 {
+  width: 15%;
+}
+
+.details-col7 {
+  width: 15%;
+}
+
+.details-col8 {
+  width: 12%;
+}
+

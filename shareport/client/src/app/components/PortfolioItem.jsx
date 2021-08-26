@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import PortfolioDetails from './PortfolioDetails.jsx';
 
 const PortfolioItem = ({ portfolio }) => {
-
   const [marketValue, setMarketValue] = useState(0);
   const [dollarGL, setDollarGL] = useState(0);
   const [percentGL, setPercentGL] = useState(0);
@@ -21,6 +20,7 @@ const PortfolioItem = ({ portfolio }) => {
     setMarketValue(round(value));
     setDollarGL(round(marketValue - portfolio.totalCost));
     setPercentGL((marketValue / portfolio.totalCost) - 1);
+    setDayChange(round(newDayChange));
   }, []);
 
   const dateCreated = (timeStampString) => {
@@ -44,6 +44,8 @@ const PortfolioItem = ({ portfolio }) => {
       <PortfolioDetails
         open={isOpen}
         setOpen={setOpen}
+        portfolio={portfolio}
+        dollarGL={dollarGL}
       />
     </>
   );
