@@ -44,20 +44,22 @@ const App = () => {
   }, []);
 
   return (
-    <div className="main">
-      <div className="top-bar">
-        <div className="shareport-logo">SharePort</div>
-        <button type="button" className="create-btn" onClick={() => setOpenCreate(true)}>Create Portfolio</button>
-        <CreatePortfolio
-          open={openCreate}
-          setOpen={setOpenCreate}
-        />
+    <globalContext.Provider value={{ state, dispatch }}>
+      <div className="main">
+        <div className="top-bar">
+          <div className="shareport-logo">SharePort</div>
+          <button type="button" className="create-btn" onClick={() => setOpenCreate(true)}>Create Portfolio</button>
+          <CreatePortfolio
+            open={openCreate}
+            setOpen={setOpenCreate}
+          />
+        </div>
+        <div className="list-ctr">
+          <PortfolioList />
+        </div>
       </div>
-      <div className="list-ctr">
-        <PortfolioList />
-      </div>
-    </div>
-  )
-}
+    </globalContext.Provider>
+  );
+};
 
 export default App;
