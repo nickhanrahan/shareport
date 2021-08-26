@@ -10,7 +10,7 @@ const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'updatePortfolios':
+    case 'addPortfolios':
       return { ...state, portfolios: action.data }
   }
 }
@@ -35,7 +35,7 @@ const App = () => {
       .then((portfolios) => {
         let orderedPortfolios = portfolios.data;
         orderedPortfolios.sort(chronologize);
-        dispatch({ type: 'updatePortfolios', data: orderedPortfolios });
+        dispatch({ type: 'addPortfolios', data: orderedPortfolios });
       });
   };
 
@@ -54,9 +54,7 @@ const App = () => {
             setOpen={setOpenCreate}
           />
         </div>
-        <div className="list-ctr">
-          <PortfolioList />
-        </div>
+        <PortfolioList />
       </div>
     </globalContext.Provider>
   );

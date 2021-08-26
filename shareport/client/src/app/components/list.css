@@ -1,0 +1,40 @@
+.list-titles {
+  display: flex;
+  text-decoration: underline;
+}
+
+.list-item-ctr {
+  display: flex;
+}
+
+.list-col1 {
+  width: 20%;
+}
+
+.list-col2 {
+  width: 15%;
+}
+
+.list-col3 {
+  width: 10%;
+}
+
+.list-col4 {
+  width: 10%;
+}
+
+.list-col5 {
+  width: 10%;
+}
+
+.list-col6 {
+  width: 10%;
+}
+
+.list-col7 {
+  width: 10%;
+}
+
+.list-col8 {
+  width: 15%
+}
