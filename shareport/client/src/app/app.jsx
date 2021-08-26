@@ -10,12 +10,21 @@ const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'updatePortfolio':
+    case 'updatePortfolios':
       return { ...state, portfolios: action.data }
   }
 }
 
 export const globalContext = React.createContext();
+
+const chronologize = (a, b) => {
+  const dateA = Date.parse(a.createdAt);
+  const dateB = Date.parse(b.createdAt);
+  if (dateA < dateB) {
+    return 1;
+  }
+  return -1;
+};
 
 const App = () => {
   const [openCreate, setOpenCreate] = useState(false);
@@ -24,7 +33,9 @@ const App = () => {
   const getPortfolios = () => {
     axios.get('/portfolios')
       .then((portfolios) => {
-        console.log(portfolios.data);
+        let orderedPortfolios = portfolios.data;
+        orderedPortfolios.sort(chronologize);
+        dispatch({ type: 'updatePortfolios', data: orderedPortfolios });
       });
   };
 
