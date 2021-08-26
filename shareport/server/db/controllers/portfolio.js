@@ -17,8 +17,16 @@ const createPortfolio = (req, res) => {
     totalCost: req.body.totalValue,
     holdings: holdingsArray,
   });
-  res.status(201);
-  res.send('post');
+  console.log(holdingsArray);
+  newPortfolio.save()
+    .then(() => {
+      res.status(201);
+      res.send('success');
+    })
+    .catch((err) => {
+      res.status(404);
+      res.send(err);
+    });
 };
 
 module.exports = {
