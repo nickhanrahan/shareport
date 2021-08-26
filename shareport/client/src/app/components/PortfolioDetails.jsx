@@ -2,7 +2,7 @@ import React from 'react';
 import HoldingItem from './HoldingItem.jsx';
 import './modal-details.css';
 
-const PortfolioDetails = ({ open, setOpen, portfolio, dollarGL }) => {
+const PortfolioDetails = ({ open, setOpen, portfolio, dollarGL, marketValue }) => {
   if (!open) {
     return null;
   }
@@ -16,11 +16,12 @@ const PortfolioDetails = ({ open, setOpen, portfolio, dollarGL }) => {
         </div>
         <div className="details-ctr">
           <div className="details-portfolio-name">{portfolio.name}</div>
-          <div className="details-username">{portfolio.username}</div>
+          <div className="details-username">Created By: {portfolio.username}</div>
           <div className="details-list">
+            <div className="holdings-title">Holdings</div>
             <div className="details-titles">
               <div className="details-col1">Symbol</div>
-              <div className="details-col2">Holding</div>
+              <div className="details-col2">Name</div>
               <div className="details-col3">No. of Shares</div>
               <div className="details-col4">Cost per Share</div>
               <div className="details-col5">Price</div>
@@ -33,9 +34,15 @@ const PortfolioDetails = ({ open, setOpen, portfolio, dollarGL }) => {
                 <HoldingItem key={`detail${holding.name}`} holding={holding} dollarGL={dollarGL} />
               ))}
             </div>
+            <div className="details-totals">
+              <div className="details-col5 totals-label">Totals</div>
+              <div className="details-col6">${portfolio.totalCost}</div>
+              <div className="details-col7">${marketValue}</div>
+              <div className="details-col8">${dollarGL}</div>
+            </div>
           </div>
           <div className="details-risk">Risk Rating: {portfolio.risk}</div>
-          <div className="details-descript">{portfolio.thesis}</div>
+          <p className="details-descript">Description: {portfolio.thesis}</p>
         </div>
       </div>
     </>

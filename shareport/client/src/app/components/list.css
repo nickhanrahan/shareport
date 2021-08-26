@@ -1,10 +1,22 @@
 .list-titles {
   display: flex;
   text-decoration: underline;
+  margin: 10px;
+  padding: 5px;
 }
 
 .list-item-ctr {
   display: flex;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.list-item-ctr:hover {
+  background-color: var(--clr-light);
+  cursor: pointer;
 }
 
 .list-col1 {

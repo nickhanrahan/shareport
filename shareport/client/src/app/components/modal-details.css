@@ -33,12 +33,43 @@
   padding-top: 1.5px;
 }
 
+.details-portfolio-name {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+  -webkit-transform: scale(1.1,1);
+  display: flex;
+  justify-content: center;
+}
+
+.details-username {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  padding-bottom: 20px;
+}
+
+.list-ctr {
+  display: flex;
+  flex-flow: column;
+  margin: 10px;
+  padding: 5px;
+}
+
 .details-titles {
   display: flex;
+  text-decoration: underline;
+  margin: 10px;
 }
 
 .details-holding-item {
   display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.details-symbol {
+  font-weight: bold;
 }
 
 .details-col1 {

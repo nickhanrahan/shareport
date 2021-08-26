@@ -18,8 +18,8 @@ const PortfolioItem = ({ portfolio }) => {
       newDayChange += (holding.quote.dayChange * holding.numberOfShares);
     });
     setMarketValue(round(value));
-    setDollarGL(round(marketValue - portfolio.totalCost));
-    setPercentGL((marketValue / portfolio.totalCost) - 1);
+    setDollarGL(round(value - portfolio.totalCost));
+    setPercentGL((value / portfolio.totalCost) - 1);
     setDayChange(round(newDayChange));
   }, []);
 
@@ -46,6 +46,7 @@ const PortfolioItem = ({ portfolio }) => {
         setOpen={setOpen}
         portfolio={portfolio}
         dollarGL={dollarGL}
+        marketValue={marketValue}
       />
     </>
   );

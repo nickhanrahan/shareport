@@ -1,3 +1,7 @@
+html {
+  background-color: #f6f5fa;
+}
+
 body {
   margin: 0px;
 }
@@ -11,6 +15,34 @@ body {
   --clr-light: #e7e4f5;
   --clr-border: #000000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff;
+  background-color: #f6f5fa;
   font-size: 16px;
+}
+
+.top-bar {
+  display: flex;
+}
+
+.shareport-logo {
+  padding: 40px;
+}
+
+button.create-btn {
+  margin: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  -webkit-transform: scale(1.1,1);
+  border: 0px;
+  border-radius: 3px;
+  background-color: #29ba23;
+}
+
+button.create-btn:hover {
+  background-color: #22a61e;
+  cursor: pointer;
 }
