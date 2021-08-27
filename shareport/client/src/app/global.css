@@ -25,10 +25,13 @@ body {
 
 .shareport-logo {
   padding: 40px;
+  font-size: 40px;
+  -webkit-transform: scale(1.15,1);
+  color: var(--clr-three);
 }
 
 button.create-btn {
-  margin: 30px;
+  margin: 40px;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 20px;

@@ -56,6 +56,10 @@
   padding: 5px;
 }
 
+.holdings-title {
+  font-size: 20px;
+}
+
 .details-titles {
   display: flex;
   text-decoration: underline;
@@ -104,3 +108,8 @@
   width: 12%;
 }
 
+.details-totals {
+  display: flex;
+  font-weight: bold;
+  padding: 10px;
+}

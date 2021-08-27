@@ -83,8 +83,10 @@ const CreatePortfolio = ({ open, setOpen }) => {
       <div className="modal-window">
         <div className="create-bar">
           <button type="button" className="btn-close-create" onClick={() => setOpen(false)}>X</button>
+          <div className="create-window-title">Create Portfolio</div>
         </div>
         <div className="create-form-ctr">
+          <p className="create-directions">Construct your model portfolio by adding investments. Select one of the risk/reward profiles and give reasoning to your selections.</p>
           <form className="create-form" onSubmit={handleCreate}>
             <div className="username">
               <label htmlFor="username">Username: </label>
@@ -107,7 +109,14 @@ const CreatePortfolio = ({ open, setOpen }) => {
               {selected.map(selection => (
                 <CreateItem key={selection.symbol} selection={selection} changeShares={changeShares} />
               ))}
-              <div className="create-total-val create-col6">{`$${totalValue}`}</div>
+              <div className="create-totals">
+                <div className="create-col1"></div>
+                <div className="create-col2"></div>
+                <div className="create-col3"></div>
+                <div className="create-col4"></div>
+                <div className="create-col5"></div>
+                <div className="create-total-val create-col6">{`$${totalValue}`}</div>
+              </div>
             </div>
             <div className="risk" onChange={(e) => setRisk(e.target.value)}>
               <label className="risk-label" htmlFor="risk">Risk Tolerance: </label>

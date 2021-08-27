@@ -37,8 +37,8 @@ const PortfolioItem = ({ portfolio }) => {
         <div className="list-col3">${portfolio.totalCost}</div>
         <div className="list-col4">${marketValue}</div>
         <div className="list-col5">${dollarGL}</div>
-        <div className="list-col6">{percentGL}%</div>
-        <div className="list-col7">${dayChange}</div>
+        <div className="list-col6">{round(percentGL)}%</div>
+        <div className="list-col7">${round(dayChange)}</div>
         <div className="list-col8">{dateCreated(portfolio.createdAt)}</div>
       </div>
       <PortfolioDetails

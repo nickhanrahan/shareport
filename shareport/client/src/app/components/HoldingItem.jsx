@@ -18,7 +18,7 @@ const HoldingItem = ({ holding }) => {
       <div className="details-col5">{`$${holding.quote.price} (${dayChange}%)`}</div>
       <div className="details-col6">${holding.costBasis}</div>
       <div className="details-col7">${marketValue}</div>
-      <div className="details-col8">${marketValue - holding.costBasis}</div>
+      <div className="details-col8">${Math.round((marketValue - holding.costBasis) * 100) / 100}</div>
     </div>
   );
 };

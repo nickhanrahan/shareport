@@ -35,6 +35,10 @@ const PortfolioDetails = ({ open, setOpen, portfolio, dollarGL, marketValue }) =
               ))}
             </div>
             <div className="details-totals">
+              <div className="details-col1"></div>
+              <div className="details-col2"></div>
+              <div className="details-col3"></div>
+              <div className="details-col4"></div>
               <div className="details-col5 totals-label">Totals</div>
               <div className="details-col6">${portfolio.totalCost}</div>
               <div className="details-col7">${marketValue}</div>

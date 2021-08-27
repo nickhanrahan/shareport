@@ -33,6 +33,41 @@
   padding-top: 1.5px;
 }
 
+.create-window-title {
+  font-size: 24px;
+  font-weight: bold;
+  -webkit-transform: scale(1.1,1);
+  display: flex;
+  justify-content: center;
+}
+
+p.create-directions {
+  margin: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.username {
+  padding: 5px 0px;
+}
+
+.username input {
+  padding: 3px;
+  font-size: inherit;
+  border: 1px solid var(--clr-secondary);
+}
+
+.name {
+  padding: 5px 0px;
+}
+
+.name input {
+  padding: 3px;
+  font-size: inherit;
+  border: 1px solid var(--clr-secondary);
+  width: 400px;
+}
+
 .inv-search {
   padding: 5px;
 }
@@ -41,6 +76,17 @@
   display: flex;
   width: 80%;
   margin: auto;
+  padding: 8px;
+  font-size: inherit;
+  border: 1px solid var(--clr-secondary);
+  border-radius: 5px;
+  max-width: 700px;
+}
+
+.create-totals {
+  display: flex;
+  font-weight: bold;
+  margin: 10px;
 }
 
 .risk-label {
@@ -68,6 +114,18 @@
   display: flex;
   justify-content: space-between;
   width: 80%;
+  max-width: 700px;
+  padding: 0px 5px;
+  font: inherit;
+  font-size: 12px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-top: 0px;
+}
+
+.inv-list-item:hover {
+  background-color: var(--clr-five);
+  cursor: pointer;
 }
 
 .inv-item-ticker {
@@ -86,8 +144,53 @@
 .create-titles {
   display: flex;
   text-decoration: underline;
+  padding: 10px;
 }
 
 .create-item {
   display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #bdbdbd;
 }
+
+.create-col1 {
+  width: 8%;
+}
+
+.create-col2 {
+  width: 38%;
+}
+
+.create-col3 {
+  width: 12%;
+}
+
+.create-col4 {
+  width: 12%;
+}
+
+.create-col5 {
+  width: 15%;
+}
+
+.create-col6 {
+  width: 15%;
+}
+
+.risk {
+  padding: 5px 0px;
+}
+
+.thesis-ctr {
+  padding: 5px 0px;
+}
+
+button.create-submit {
+  padding: 5px 15px;
+  font-size: inherit;
+  color: #ffffff;
+  border: 0px;
+  border-radius: 3px;
+  background-color: var(--clr-primary);
+}
+
