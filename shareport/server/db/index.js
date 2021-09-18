@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const { MONGOUN, MONGOPW } = require('../../db-config.js');
 
-const mongoURI = 'mongodb://localhost:27017/portfolios';
+const mongoURI = `mongodb://${MONGOUN}:${MONGOPW}@localhost:27017`;
 
 mongoose.connect(mongoURI, { useUnifiedTopology: true, useNewUrlParser: true });
 
