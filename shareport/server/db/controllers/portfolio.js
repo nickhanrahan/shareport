@@ -1,5 +1,5 @@
-const Portfolio = require('../model/portfolio.js');
 const axios = require('axios');
+const Portfolio = require('../model/portfolio.js');
 const { APIKEY } = require('../../fmp-config.js');
 
 const createPortfolio = (req, res) => {
@@ -90,8 +90,8 @@ const formatPortfolios = (portfoliosArray) => {
       createdAt: portfolio.createdAt,
     };
     Promise.all(formatHoldings(portfolio.holdings))
-    .then((formattedHoldings) => {
-      portfolioObj.holdings = formattedHoldings;
+      .then((formattedHoldings) => {
+        portfolioObj.holdings = formattedHoldings;
         resolve(portfolioObj);
       })
       .catch((err) => {

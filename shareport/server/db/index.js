@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
+
+mongoose.Promise = global.Promise;
+
 const { MONGOUN, MONGOPW } = require('../../db-config.js');
 
-const mongoURI = `mongodb://${MONGOUN}:${MONGOPW}@mongodb-shareport:27017/portfolios`;
+const mongoURI = `mongodb://${MONGOUN}:${MONGOPW}@mongodb:27017/portfolios`;
 
 mongoose.connect(mongoURI, { useUnifiedTopology: true, useNewUrlParser: true });
 
