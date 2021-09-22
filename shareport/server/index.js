@@ -1,5 +1,6 @@
 const express = require('express');
 const axios = require('axios');
+const db = require('./db/index.js');
 const { APIKEY } = require('./fmp-config.js');
 const { createPortfolio, getPortfolios } = require('./db/controllers/portfolio.js');
 
