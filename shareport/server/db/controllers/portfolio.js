@@ -21,6 +21,7 @@ const createPortfolio = (req, res) => {
   });
   newPortfolio.save()
     .then(() => {
+      console.log('post made');
       res.status(201);
       res.send('success');
     })
