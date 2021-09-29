@@ -1,3 +1,4 @@
 .DS_Store
 db-config.js
 mongo-shareport.yaml
+mongo-shareport.yml
