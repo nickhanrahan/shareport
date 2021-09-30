@@ -1,7 +1,11 @@
-FROM node:latest
+FROM node:14-alpine
 
 RUN mkdir -p /home/app
 
 COPY . /home/app
 
-CMD ["node", "home/app/server/index.js"]
+WORKDIR "/home/app"
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
