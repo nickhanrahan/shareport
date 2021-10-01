@@ -2,9 +2,13 @@ const mongoose = require('mongoose');
 
 const { MONGOUN, MONGOPW } = require('../../db-config.js');
 
-const mongoURI = `mongodb://${MONGOUN}:${MONGOPW}@mongodb:27018/portfolios`;
+const mongoURI = `mongodb://${MONGOUN}:${MONGOPW}@mongodb:27017`;
 
-mongoose.connect(mongoURI, { useUnifiedTopology: true, useNewUrlParser: true })
+mongoose.connect(mongoURI, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+  dbName: 'portfolios',
+})
   .then(() => {
     console.log('mongo connection established');
   })
