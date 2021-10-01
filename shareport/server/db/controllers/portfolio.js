@@ -21,7 +21,6 @@ const createPortfolio = (req, res) => {
   });
   newPortfolio.save()
     .then(() => {
-      console.log('post made');
       res.status(201);
       res.send('success');
     })
@@ -30,16 +29,6 @@ const createPortfolio = (req, res) => {
       res.send(err);
     });
 };
-
-const promisedQuote = (holding) => new Promise((resolve, reject) => {
-  axios.get(`https://financialmodelingprep.com/api/v3/quote/${holding.symbol}?apikey=${APIKEY}`)
-    .then((quote) => {
-      resolve(quote);
-    })
-    .catch((err) => {
-      reject(err);
-    });
-});
 
 const requestQuote = (symbol) => new Promise((resolve, reject) => {
   axios.get(`https://financialmodelingprep.com/api/v3/quote/${symbol}?apikey=${APIKEY}`)
